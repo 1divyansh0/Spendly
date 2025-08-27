@@ -36,7 +36,7 @@ const App = () => {
 const Root = ()=>{
   const authenticated = localStorage.getItem("token");
 
-   return (authenticated?(Navigate("/home")):Navigate("/login"))
+     return authenticated ? <Navigate to="/home" replace /> : <Navigate to="/login" replace />;
 }
 
 export default App
