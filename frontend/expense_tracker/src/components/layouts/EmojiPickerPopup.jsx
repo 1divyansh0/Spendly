@@ -30,9 +30,12 @@ const [isOpen, setisOpen] = useState(false)
                 >
                   <LuX/>
                 </button>
-                <EmojiPicker
-                open={isOpen}
-                onEmojiClick={(emoji)=>onSelect(emoji?.imageUrl || "")}/>
+          <div className='max-w-xs sm:max-w-sm md:max-w-md w-full'>
+            <EmojiPicker
+              width="100%"
+              onEmojiClick={(emoji) => onSelect(emoji?.imageUrl || "")}
+            />
+            </div>
                 </div>
         )}
     </div>

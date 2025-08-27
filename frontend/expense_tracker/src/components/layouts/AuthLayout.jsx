@@ -5,7 +5,7 @@ import Logo from "../../assets/images/Logo.png"
 const AuthLayout = ({children}) => {
   return (
     <div className='flex'>
-        <div className='w-screen h-screen md:w-[60vw] px-12  pb-12'>
+        <div className='w-screen h-screen md:w-[60vw] px-12 md:mt-24 pb-12'>
       
             {children}
         </div>
