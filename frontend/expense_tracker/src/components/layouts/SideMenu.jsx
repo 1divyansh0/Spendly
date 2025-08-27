@@ -28,7 +28,7 @@ const SideMenu = ({activeMenu}) => {
       {user?(
         <img src={user?.profileImageUrl ||"https://cdn.vectorstock.com/i/500p/17/84/cute-young-man-avatar-character-cartoon-style-vector-36211784.jpg"}
         alt='Profile Image'
-        className='W-20 h-20 rounded-full'/>):<></>
+        className='W-20 h-20 rounded-full object-cover'/>):<></>
       }
       <h5 className='text-gray-950 font-medium leading-6 mt-3'>
        {user?.fullName || ""}

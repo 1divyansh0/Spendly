@@ -9,6 +9,7 @@ import axiosInstance from '../../utils/axios';
 import { UserContext } from '../../../context/UserContext';
 import uploadImage from '../../utils/uploadimages';
 import toast from 'react-hot-toast';
+import Logo from "../../assets/images/Logo.png"
 
 
 
@@ -81,15 +82,15 @@ import toast from 'react-hot-toast';
 
     <AuthLayout>
       <div className='lg:w-[100%]  md:mt-0 flex flex-col justify-center items-center overflow-y-auto'>
-        <h3 className='text-xl font-semibold text-black'>Create an Account</h3>
-        <p className='text-xs text-slate-700 mt-[5px] mb-6'>
+           <img src={Logo} alt="Spendly Logo" className="h-25 md:h-50 w-auto mx-auto" />
+        <h3 className='text-md font-semibold text-black'>Create an Account</h3>
+        <p className='text-xs text-slate-700 mt-[5px] mb-2'>
           Join us today by entering your  details below
         </p>
         <form onSubmit={handlesignup}>
-
           <Profilephotoselector image={profilepic} setimage = {setprofilepic}/>
 
-          <div className='flex flex-col md:grid md:grid-cols-2 gap-4 mt-2'>
+          <div className='flex flex-col md:grid md:grid-cols-2  mt-1'>
             <Input 
             value = {fullname}
             onChange={(e)=>setfullname(e.target.value)}

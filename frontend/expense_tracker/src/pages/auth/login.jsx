@@ -7,6 +7,7 @@ import axiosInstance from '../../utils/axios'
 import { API_PATHS } from '../../utils/apiPaths'
 import {UserContext} from '../../../context/UserContext'
 import toast from 'react-hot-toast'
+import Logo from "../../assets/images/Logo.png"
 
 const login = () => {
   
@@ -56,7 +57,8 @@ const login = () => {
     }
   return (
     <AuthLayout>
-        <div className='lg:w-[70%] h-3/6  flex flex-col justify-center '>
+        <div className='lg:w-[70%] h-3/6 mt-25 md:mt-0 flex flex-col justify-center '>
+                <img src={Logo} alt="Spendly Logo" className="h-30 md:h-50 w-auto mx-auto" />
             <h3 className='text-xl font-semibold text-black'>Welcome Back</h3>
             <p className='text-xs text-state-700 mt-[5px] mb-6'>Please enter your details to log in</p>
         
