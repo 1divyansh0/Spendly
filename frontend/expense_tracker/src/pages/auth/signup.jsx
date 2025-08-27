@@ -80,16 +80,16 @@ import toast from 'react-hot-toast';
    return (
 
     <AuthLayout>
-      <div className='lg:w-[100%] h-auto md:h-full mt-10 md:mt-0 flex flex-col justify-center'>
+      <div className='lg:w-[100%]  md:mt-0 flex flex-col justify-center items-center overflow-y-auto'>
         <h3 className='text-xl font-semibold text-black'>Create an Account</h3>
-        <p className='text-xs text-slate-700 mt-[5px] mb-8'>
+        <p className='text-xs text-slate-700 mt-[5px] mb-6'>
           Join us today by entering your  details below
         </p>
         <form onSubmit={handlesignup}>
 
           <Profilephotoselector image={profilepic} setimage = {setprofilepic}/>
 
-          <div className='flex flex-col md:grid md:grid-cols-2 gap-4 '>
+          <div className='flex flex-col md:grid md:grid-cols-2 gap-4 mt-2'>
             <Input 
             value = {fullname}
             onChange={(e)=>setfullname(e.target.value)}

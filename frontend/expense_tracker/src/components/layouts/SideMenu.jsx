@@ -23,7 +23,7 @@ const SideMenu = ({activeMenu}) => {
     }
     navigate(route);
   }
-  return <div className='w-64 h-[calc(100vh-61px)] bg-white p-5'>
+  return <div className='w-64 h-[calc(100vh-61px)] bg-white p-1'>
     <div className='flex flex-col items-center justify-center gap-3 mt-3 mb-7'>
       {user?(
         <img src={user?.profileImageUrl ||"https://cdn.vectorstock.com/i/500p/17/84/cute-young-man-avatar-character-cartoon-style-vector-36211784.jpg"}
