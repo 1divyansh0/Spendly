@@ -45,6 +45,7 @@ import Logo from "../../assets/images/Logo.png"
 
     try{
          //Upload image if present
+         const tid = toast.loading("Spendly is Responding!")
          const res = await axiosInstance.post(API_PATHS.AUTH.REGISTER,{
           fullName:fullname,
           email,
@@ -52,7 +53,7 @@ import Logo from "../../assets/images/Logo.png"
          })
          
         const {user,token} = res.data
-        toast.success(`Welcome ${user?.fullName}!`);
+        toast.success(`Welcome ${user?.fullName}!`,{id:tid});
 
         if(token){
           localStorage.setItem("token",token);
@@ -71,6 +72,7 @@ import Logo from "../../assets/images/Logo.png"
           updateUser(updateUser)
          }
       }catch(err){
+         toast.error(`Error ${err.message}!`,{id:tid});
         if(err.response && err.response.data.message)
           seterror(err.response.data.message);
         else seterror("Something went Wrong , Please try again!"+err)
