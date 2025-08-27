@@ -8,6 +8,7 @@ import { API_PATHS } from '../../utils/apiPaths';
 import axiosInstance from '../../utils/axios';
 import { UserContext } from '../../../context/UserContext';
 import uploadImage from '../../utils/uploadimages';
+import toast from 'react-hot-toast';
 
 
 
@@ -50,6 +51,7 @@ import uploadImage from '../../utils/uploadimages';
          })
          
         const {user,token} = res.data
+        toast.success(`Welcome ${user?.fullName}!`);
 
         if(token){
           localStorage.setItem("token",token);

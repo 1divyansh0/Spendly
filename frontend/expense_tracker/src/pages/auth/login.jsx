@@ -48,6 +48,7 @@ const login = () => {
           navigate("/home")
         }
       }catch(err){
+          toast.error(`Error: ${err.response?.data?.message}` ,{id:tid});
         if(err.response && err.response.data.message)
           seterror(err.response.data.message);
         else seterror("Something went Wrong , Please try again!")
