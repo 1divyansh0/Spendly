@@ -1,0 +1,17 @@
+# Node dependencies
+backend/node_modules/
+frontend/expense_tracker/node_modules/
+
+# Env files
+backend/.env
+frontend/expense_tracker/.env
+
+# Build outputs
+backend/dist/
+frontend/expense_tracker/build/
+
+# Logs
+*.log
+
+# VS Code settings
+.vscode/
