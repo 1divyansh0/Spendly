@@ -27,13 +27,15 @@ const expense = () => {
     setloading(true);
 
     try{
-      
+      const tid = toast.loading("Loading Expense Details");
       const response = await axiosInstance.get(API_PATHS.INCOME.GET_ALL_EXPENSE);
 
       if(response.data){
         setexpenseData(response.data);
       }
+      toast.success("Expense Details Loaded!",{id:tid})
     }catch(err){
+      toast.error(`Error: ${err.message}`,{id:tid})
       console.error("Something went Wrong !,Please try again!",err)
     }finally{
       setloading(false);

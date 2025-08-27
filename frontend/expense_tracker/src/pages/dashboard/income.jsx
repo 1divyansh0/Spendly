@@ -28,7 +28,7 @@ const income = () => {
   const fetchIncomeDetails = async()=>{
     if(loading)return;
     setloading(true);
-    
+    const tid = toast.loading('Loading Income Details!')
 
     try{
       const response = await axiosInstance.get(API_PATHS.INCOME.GET_ALL_INCOME);
@@ -37,8 +37,10 @@ const income = () => {
       if(response.data){
         setincomeData(response.data);
       }
+      toast.success("Income Details Loaded!",{id:tid});
     }catch(err){
-      console.log("Something went Wrong !,Please try again!")
+      toast.error(`Error ${err.message}`,{id:tid});
+      console.log("Something went Wrong !,Please try again!");
     }finally{
       setloading(false);
     }
